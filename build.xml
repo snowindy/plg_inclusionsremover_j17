@@ -1,0 +1,23 @@
+<project name="plg_inclusionsremover_j17" default="dist" basedir=".">
+    <description>
+        plg_inclusionsremover_j17 distribution builder
+    </description>
+	
+  <property name="dist"  location="dist"/>
+
+  <target name="init">
+    <mkdir dir="${dist}"/>
+  </target>
+
+  <target name="dist" depends="clean, init"
+        description="generate the distribution" >
+  	<zip destfile="${dist}/plg_inclusionsremover_j17.zip"
+  	       basedir="."
+  	       excludes="dist/**, .gitignore, build.xml, .project, .git/**"
+  	  />
+  </target>
+
+  <target name="clean" description="clean up" >
+    <delete dir="${dist}"/>
+  </target>
+</project>

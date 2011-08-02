@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system">
+	<name>System - Inclusions Remover</name>
+	<author>Hut 32</author>
+	<creationDate>April 2009</creationDate>
+	<copyright>Hut 32</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>ab.hut32@gmail.com</authorEmail>
+	<authorUrl>hut32.blogspot.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Helps to remove unnecessary inclusions of scripts and CSS files which were included through Joomla API</description>
+	<files>
+		<filename plugin="inclusionsremover">inclusionsremover.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_inclusionsremover.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			
+		<field default="media/system/js/mootools.js&#13;media/system/js/caption.js" 
+			name="jsInclusions" 
+			type="textarea" 
+			rows="20" 
+			cols="45" 
+			label="INCREMOVER_PARAM_LABEL_JSFILES" 
+			description="INCREMOVER_PARAM_DESCR_JSFILES" />
+		<field 
+			default="" 
+			name="cssInclusions" 
+			type="textarea" 
+			rows="20" 
+			cols="45" 
+			label="INCREMOVER_PARAM_LABEL_CSSFILES" 
+			description="INCREMOVER_PARAM_DESCR_CSSFILES" />
+		
+			</fieldset>
+		</fields>
+	</config>
+</install>
