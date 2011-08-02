@@ -13,7 +13,7 @@
         description="generate the distribution" >
   	<zip destfile="${dist}/plg_inclusionsremover_j17.zip"
   	       basedir="."
-  	       excludes="dist/**, .gitignore, build.xml, .project, .git/**"
+  	       excludes="dist/**, .gitignore, build.xml, .project, .git/**, .settings/**"
   	  />
   </target>
 
