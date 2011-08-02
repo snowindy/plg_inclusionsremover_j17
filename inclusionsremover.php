@@ -45,6 +45,7 @@ class plgSystemInclusionsremover extends JPlugin
 		$files = $this->getFilesForRemoving($paramName);
 		if (count($files) == 0) return $inclusions;
 
+		
 		foreach ($inclusions as $incFile => $value)
 		{
 			$uIncFile = $this->_updatePath($incFile);
@@ -62,7 +63,7 @@ class plgSystemInclusionsremover extends JPlugin
 		$files = array();
 		
 		$filesStr = $this->params->get($paramName, '');
-		$tempFiles = explode("\n", $filesStr);
+		$tempFiles = split("[\n|\r]", $filesStr);//explode("\n", $filesStr);
 		
 		foreach ($tempFiles as $file)
 		{
